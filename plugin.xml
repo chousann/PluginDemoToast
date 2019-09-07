@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="cordova-plugin-plugindemo-toast" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>PluginDemoToast</name>
+    <js-module name="PluginDemoToast" src="www/PluginDemoToast.js">
+        <clobbers target="cordova.plugins.PluginDemoToast" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="PluginDemoToast">
+                <param name="android-package" value="cordova-plugin-plugindemo-toast.PluginDemoToast" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+        </config-file>
+        <source-file src="src/android/PluginDemoToast.java" target-dir="src/cordova-plugin-plugindemo-toast/PluginDemoToast" />
+    </platform>
+</plugin>
